@@ -7,6 +7,37 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   
   <style>
+    /* Remove max-width restrictions on mobile */
+@media (max-width: 768px) {
+  body {
+    font-size: 100%;
+  }
+  
+  .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    flex-direction: column !important;
+    display: flex !important;
+  }
+  
+  .image-section {
+    display: flex !important;
+    width: 100% !important;
+    height: 300px !important;
+    padding: 40px 20px !important;
+  }
+  
+  .form-section {
+    width: 100% !important;
+    padding: 30px 15px !important;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
     * {
       margin: 0;
       padding: 0;
@@ -633,6 +664,7 @@ $(document).ready(function() {
   </script>
 </body>
 </html>
+
 
 
 
