@@ -1,73 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
   <title>Registration Form</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   
   <style>
-    /* Remove max-width restrictions on mobile */
-@media (max-width: 768px) {
-  body {
-    font-size: 100%;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  
-  .container {
-    max-width: 100% !important;
-    width: 100vw !important;
-    height: auto !important;
-    flex-direction: column !important;
-    display: flex !important;
-    border-radius: 0 !important;
-    margin: 0 !important;
-  }
-  
-  .image-section {
-    display: block !important;
-    width: 100% !important;
-    height: 200px !important;
-    padding: 20px 15px !important;
-    margin: 0 !important;
-  }
-  
-  .image-section h2 {
-    font-size: 1.8em !important;
-    margin: 10px 0 !important;
-  }
-  
-  .form-section {
-    width: 100% !important;
-    padding: 20px 15px !important;
-    height: auto !important;
-    overflow-y: auto !important;
-    max-height: 70vh !important;
-  }
-  
-  .form-row {
-    grid-template-columns: 1fr !important;
-    gap: 10px !important;
-  }
-  
-  h1 {
-    font-size: 1.8em !important;
-    margin: 10px 0 !important;
-  }
-  
-  .btn-submit {
-    padding: 12px !important;
-    font-size: 1.1em !important;
-  }
-  
-  input, select, textarea {
-    padding: 12px 10px !important;
-    font-size: 16px !important;
-  }
-}
-
-
     * {
       margin: 0;
       padding: 0;
@@ -84,7 +23,7 @@
       padding: 20px;
       position: relative;
       overflow: hidden;
-      font-size: 120%;
+      font-size: 16px;
     }
 
     body::before {
@@ -424,66 +363,214 @@
       box-shadow: 0 0 30px rgba(0, 188, 212, 0.5);
     }
 
-    @media (max-width: 768px) {
-      .container { flex-direction: column; height: auto; }
-      .form-row { grid-template-columns: 1fr; }
-      .dob-select-wrap { flex-direction: column; }
+    /* ===== MOBILE RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .container {
+        height: auto;
+        flex-direction: column;
+      }
+
+      .image-section {
+        padding: 50px 30px;
+        min-height: 250px;
+        border-radius: 25px 25px 0 0;
+      }
+
+      .image-section h2 {
+        font-size: 2.5em;
+      }
+
+      .form-section {
+        padding: 40px 30px;
+      }
+
+      h1 {
+        font-size: 2.2em;
+      }
     }
-    /* Mobile Responsive Fix */
-@media (max-width: 768px) {
-  body {
-    font-size: 14px !important;
-    padding: 5px !important;
-  }
 
-  .container {
-    height: auto !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    flex-direction: column !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
+    @media (max-width: 768px) {
+      body {
+        font-size: 14px;
+        padding: 10px;
+        align-items: flex-start;
+      }
 
-  .image-section {
-    height: 140px !important;
-    padding: 15px !important;
-    border-radius: 0 !important;
-    width: 100% !important;
-  }
+      .container {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        flex-direction: column;
+        border-radius: 15px;
+        margin-top: 10px;
+      }
 
-  .image-section h2 {
-    font-size: 1.4em !important;
-  }
+      .image-section {
+        width: 100%;
+        height: 180px;
+        padding: 20px 15px;
+        border-radius: 15px 15px 0 0;
+        justify-content: center;
+      }
 
-  .form-section {
-    padding: 15px !important;
-    height: auto !important;
-    width: 100% !important;
-  }
+      .image-section::before {
+        width: 600px;
+        height: 600px;
+      }
 
-  h1 {
-    font-size: 1.4em !important;
-    margin: 10px 0 !important;
-  }
+      .image-section-content {
+        text-align: center;
+      }
 
-  input, select, textarea {
-    font-size: 14px !important;
-    padding: 10px !important;
-    width: 100% !important;
-  }
+      .image-section h2 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+      }
 
-  .btn-submit {
-    font-size: 1em !important;
-    padding: 12px !important;
-  }
+      .image-section p {
+        font-size: 0.95em;
+        line-height: 1.4;
+      }
 
-  .form-row {
-    grid-template-columns: 1fr !important;
-  }
-}
+      .form-section {
+        width: 100%;
+        padding: 20px 15px;
+        height: auto;
+        max-height: 70vh;
+      }
 
+      h1 {
+        font-size: 1.6em;
+        margin-bottom: 8px;
+      }
+
+      .subtitle {
+        font-size: 0.9em;
+        margin-bottom: 15px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .form-group {
+        margin-bottom: 12px;
+      }
+
+      label {
+        font-size: 0.9em;
+        margin-bottom: 6px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="password"],
+      select,
+      textarea {
+        padding: 12px 10px;
+        font-size: 14px;
+      }
+
+      textarea {
+        min-height: 60px;
+      }
+
+      .dob-select-wrap {
+        flex-direction: row;
+        gap: 8px;
+      }
+
+      .dob-select-wrap select {
+        font-size: 13px;
+      }
+
+      .checkbox {
+        margin-top: 12px;
+        margin-bottom: 12px;
+      }
+
+      .checkbox input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+
+      .checkbox label {
+        font-size: 0.85em;
+      }
+
+      .btn-submit {
+        padding: 12px;
+        font-size: 1.1em;
+        margin-top: 12px;
+      }
+
+      .top-nav {
+        top: 10px;
+        right: 10px;
+      }
+
+      .nav-btn {
+        padding: 10px 18px;
+        font-size: 0.9em;
+      }
+
+      .modal-content {
+        margin: 20% auto;
+        padding: 30px;
+        max-width: 90%;
+      }
+
+      .success-icon {
+        font-size: 60px;
+        margin-bottom: 15px;
+      }
+
+      .modal-content h2 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+      }
+
+      .btn-close {
+        padding: 12px 30px;
+        font-size: 1em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        font-size: 13px;
+      }
+
+      .image-section {
+        height: 150px;
+        padding: 15px 10px;
+      }
+
+      .image-section h2 {
+        font-size: 1.5em;
+      }
+
+      .image-section p {
+        font-size: 0.85em;
+      }
+
+      .form-section {
+        padding: 15px 12px;
+        max-height: 75vh;
+      }
+
+      h1 {
+        font-size: 1.4em;
+      }
+
+      input, select, textarea {
+        padding: 10px 8px;
+        font-size: 13px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -608,7 +695,7 @@
           <label for="terms">I agree to Terms & Conditions</label>
         </div>
 
-        <button type="submit" class="btn-submit">Create Account </button>
+        <button type="submit" class="btn-submit">Create Account</button>
       </form>
     </div>
   </div>
@@ -749,9 +836,3 @@ $(document).ready(function() {
   </script>
 </body>
 </html>
-
-
-
-
-
-
