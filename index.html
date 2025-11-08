@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registration Form</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   
   <style>
+    @media (max-width: 768px) {
+  .container { flex-direction: column; height: auto; }
+  .form-row { grid-template-columns: 1fr; }
+  .dob-select-wrap { flex-direction: column; }
+  .form-section, .image-section {
+    padding: 30px 10px;
+    min-width: 0;
+  }
     * {
       margin: 0;
       padding: 0;
@@ -633,3 +642,4 @@ $(document).ready(function() {
   </script>
 </body>
 </html>
+
