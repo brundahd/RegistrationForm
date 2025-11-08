@@ -11,32 +11,62 @@
 @media (max-width: 768px) {
   body {
     font-size: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
   }
   
   .container {
     max-width: 100% !important;
-    width: 100% !important;
+    width: 100vw !important;
     height: auto !important;
     flex-direction: column !important;
     display: flex !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
   }
   
   .image-section {
-    display: flex !important;
+    display: block !important;
     width: 100% !important;
-    height: 300px !important;
-    padding: 40px 20px !important;
+    height: 200px !important;
+    padding: 20px 15px !important;
+    margin: 0 !important;
+  }
+  
+  .image-section h2 {
+    font-size: 1.8em !important;
+    margin: 10px 0 !important;
   }
   
   .form-section {
     width: 100% !important;
-    padding: 30px 15px !important;
+    padding: 20px 15px !important;
+    height: auto !important;
+    overflow-y: auto !important;
+    max-height: 70vh !important;
   }
   
   .form-row {
     grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  
+  h1 {
+    font-size: 1.8em !important;
+    margin: 10px 0 !important;
+  }
+  
+  .btn-submit {
+    padding: 12px !important;
+    font-size: 1.1em !important;
+  }
+  
+  input, select, textarea {
+    padding: 12px 10px !important;
+    font-size: 16px !important;
   }
 }
+
 
     * {
       margin: 0;
@@ -664,6 +694,7 @@ $(document).ready(function() {
   </script>
 </body>
 </html>
+
 
 
 
